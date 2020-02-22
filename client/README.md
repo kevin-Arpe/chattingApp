@@ -1,4 +1,4 @@
-This project was for making chatting between users as react-tutorial.
+This project was for making a user board as react-tutorial.
 
 ## Available Scripts
 

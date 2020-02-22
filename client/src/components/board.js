@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ChatBox extends React.Component {
+class Board extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -12,4 +12,4 @@ class ChatBox extends React.Component {
     }
 }
 
-export default ChatBox;
+export default Board;
