@@ -1,14 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Board from './components/chat';
+import Board from './components/board';
 
-function App() {
-  return (
-    <div className="App">
+class App extends React.Component {
+  render() {
+    return (
       <Board />
-    </div>
-  );
+    );
+  }
 }
-
 export default App;
