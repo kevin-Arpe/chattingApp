@@ -24,6 +24,7 @@ class App extends React.Component {
         ]
     };
     this.saveDataHandler = this.saveDataHandler.bind(this);
+    this.handleRemove = this.handleRemove.bind(this);
   }
 
   saveDataHandler(data) {
@@ -36,6 +37,12 @@ class App extends React.Component {
         brdwriter: data.brdwriter
       })
     })
+  }
+
+  handleRemove(brdnum) {
+    this.setState({
+      boards: this.state.boards.filter(item => item.brdnum !== brdnum)
+    });
   }
 
   render() {
@@ -51,11 +58,12 @@ class App extends React.Component {
                     <td width="300">Title</td>
                     <td width="100">Name</td>
                     <td width="100">Date</td>
+                    <td width="25">X</td>
                 </tr>
             </thead>
             <tbody>
                 {
-                    boards.map( (item) => <Board key={item.brdnum} item={item} /> ) 
+                    boards.map( (item) => <Board key={item.brdnum} item={item} handleRemove={this.handleRemove} /> ) 
                 }
             </tbody>
         </table>
